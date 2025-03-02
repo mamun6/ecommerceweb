@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Router, Routes, Route } from 'react-router-dom';
 import Shop from './components/Pages/Shop';
 import ShopCategory from './components/Pages/ShopCategory';
 import Product from './components/Pages/Product';
@@ -15,8 +15,8 @@ import kid_banner from '../src/assets/banner_kids.png'
 const App = () => {
   return (
     <div>
-      <BrowserRouter >
-        <Navbar />
+      <BrowserRouter basename="/ecommerceweb" >
+      <Navbar />
         <Routes>
           <Route path='/' element={<Shop />} />
           <Route path='/mens' element={<ShopCategory banner={men_banner} category="men" />} />
